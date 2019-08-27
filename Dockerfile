@@ -39,4 +39,4 @@ EXPOSE 5001
 
 WORKDIR /opt/ml
 
-ENTRYPOINT ["/root/anaconda3/bin/mlflow", "models", "server", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5001]
+ENTRYPOINT ["/root/anaconda3/bin/mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5001"]
