@@ -1,0 +1,6 @@
+flavors:
+  crate:
+    version: 0.1.0
+    model: crate.bin
+utc_time_created: 19-08-15T17:19:57.57.36
+run_id: dfb4d049485044a4b7c4b69258eb75c4
