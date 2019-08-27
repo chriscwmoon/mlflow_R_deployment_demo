@@ -9,15 +9,11 @@ Docker commands:
 Build a docker image :
 ```
 docker build --rm -t <image name> <path to Dockerfile/modelfiles>
-
-eg. docker build --rm -t rdeploy .
 ```
 
 Run an image:
 ```
 docker run --rm -P <image name>
-
-eg. docker run --rm -P <image name>
 ```
 
 Find currently running containers:
