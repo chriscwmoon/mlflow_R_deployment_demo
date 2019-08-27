@@ -3,6 +3,10 @@
 MLflow R model deployment demo on Azure
 
 
+Before build a docker image, please have following 3 files in a same directory:
+* Dockerfile
+* MLmodel
+* crate.bin
 
 Docker commands:
 
