@@ -24,7 +24,7 @@ RUN curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 RUN bash Anaconda3-2019.03-Linux-x86_64.sh -b
 ENV PATH=$CONDA_DIR/bin:$PATH
 
-RUN R -e "install.packages(c('mlflow', 'carrier', 'caret'), repos='https://cloud.r-project.org')"
+RUN R -e "install.packages(c('mlflow', 'carrier'), repos='https://cloud.r-project.org')"
 
 RUN R -e "library(mlflow);install_mlflow()"
 
@@ -41,5 +41,6 @@ WORKDIR /opt/ml
 
 # Extra libraries for the model
 RUN R -e "install.packages('glmnet')"
+#RUN R -e "install.packages('caret')"
 
 ENTRYPOINT ["/root/anaconda3/bin/mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5001"]
