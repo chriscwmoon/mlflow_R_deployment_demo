@@ -39,8 +39,8 @@ EXPOSE 5001
 
 WORKDIR /opt/ml
 
-# Extra libraries for the model
-RUN R -e "install.packages('glmnet')"
-RUN R -e "install.packages('caret')"
+# Extra libraries for the model specific
+#RUN R -e "install.packages('glmnet')"
+#RUN R -e "install.packages('caret')"
 
 ENTRYPOINT ["/root/anaconda3/bin/mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5001"]
